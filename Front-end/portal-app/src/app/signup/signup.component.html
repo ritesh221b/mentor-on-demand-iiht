@@ -1,0 +1,75 @@
+<!-- 
+	Author  : Ritesh Phogat
+	Email   : riteshphogat11@gmail.com
+	Project : Mentor on Demand 
+	Date 
+-->
+<div class="row mt-5 pt-3">
+	<div class="col-3"></div>
+	<div class="col-6">
+		
+		<div class="ui segment raised">
+			<a routerLink="/page"><i class="ui icon left arrow black link m-0 pt-0 large"></i></a>
+
+			<div class="container text-center">
+				
+				<h1 class="text-center">Signup as student</h1>
+				<br>
+				<form class="ui form">
+					<div class="field w-100">
+						<label class="text-left" for="email">Email address</label>
+						<input type="text" [(ngModel)]="user.email" placeholder="Email" name="email" id="email"><br>
+					</div>
+					
+					<div class="field w-100">
+						<label class="text-left" for="userName">Username</label>
+						<input type="text" [(ngModel)]="user.userName" placeholder="Username" name="userName" id="userName"><br>
+					</div>
+					
+					<div class="field w-100">
+						<label class="text-left" for="firstName">First Name</label>
+						<input type="text" [(ngModel)]="user.firstName" placeholder="First Name" name="firstName" id="firstName"><br>
+					</div>
+					
+					<div class="field w-100">
+						<label class="text-left" for="lastName">Last Name</label>
+						<input type="text" [(ngModel)]="user.lastName" placeholder="Last name" name="lastName" id="lastName"><br>
+					</div>
+					
+					<div class="field w-100">
+						<label class="text-left" for="password">Password</label>
+						<input type="password" [(ngModel)]="user.password" placeholder="Password" name="password" id="password"><br>
+					</div>
+					
+					<div class="field w-100">
+						<label class="text-left" for="contactNumber">Contact No</label>
+						<input type="text" [(ngModel)]="user.contactNumber" placeholder="Contact Number" name="contactNumber" id="contactNumber"><br>
+					</div>
+					
+					<div class="field w-100">
+						<label class="text-left" for="regCode">Registration Code</label>
+						<input type="text" [(ngModel)]="user.regCode" placeholder="Registration Code" name="regCode" id="regCode"><br>
+					</div>
+					
+					<div class="field w-100">
+						<label class="text-left" for="linkedinUrl">Linked In Url</label>
+						<input type="text" [(ngModel)]="user.linkedinUrl" placeholder="Linked In Url " name="linkedinUrl" id="linkedinUrl"><br>
+					</div>
+					
+					<div class="field w-100">
+						<label class="text-left" for="yearsofExperience">Years of Experience</label>
+						<input type="text" [(ngModel)]="user.yearsofExperience" placeholder="0,1,2 etc. " name="yearsofExperience" id="yearsofExperience"><br>
+					</div>
+					
+					<p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+					
+					<div class="clearfix">
+						<button routerLink="/signin" class="ui button up-green-up fluid green text-center" id="signupbtn" (click)="createUser()">Sign Up</button>
+					</div>
+					
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="col-3"></div>
+</div>

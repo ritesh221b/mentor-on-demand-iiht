@@ -1,0 +1,29 @@
+<!-- 
+  Author  : Ritesh Phogat
+  Email   : riteshphogat11@gmail.com
+  Project : Mentor on Demand 
+  Date 
+-->
+<div class="ui left ribbon label link large  text-white up-sec-bg">Skills</div>
+<a routerLink="/addskill" class="ui basic right label link large float-right"> <i class="ui icon plus"></i>add</a>
+<div class="p-3">
+
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Prerequisites</th>
+        <th>Table Of Contents</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let skill of skill">
+        <td>{{skill.id}}</td>
+        <td>{{skill.name}}</td>
+        <td>{{skill.prerequisites}}</td>
+        <td>{{skill.toc}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

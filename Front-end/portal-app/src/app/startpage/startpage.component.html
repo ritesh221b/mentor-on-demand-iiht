@@ -1,0 +1,79 @@
+<!-- 
+  Author  : Ritesh Phogat
+  Email   : riteshphogat11@gmail.com
+  Project : Mentor on Demand 
+-->
+<h3 class="text-center mt-5"><i class="ui icon certificate up-green-text"></i> Get Certified Today</h3>
+<br>  <br>  <br>  
+
+
+<div id="section3" class="ui container fluid">
+
+  <!-- Cards -->
+  <div class="ui cards link">
+    <div class="card raised"  *ngFor="let technology of technology">
+      <div class="content">
+        <div class="header">{{technology.techName}}</div>
+        <div class="meta">Technology Id: {{technology.id}}</div>
+        <div class="description">{{technology.description}}
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Cards -->
+
+</div>
+
+
+
+<div class="ui container fluid mt-5">
+  <br>
+  <h3 class="h4"> <i class="ui icon users up-green-text"></i> Join {{users.length}} other students</h3>
+  <br>
+
+  <!-- Cards -->
+  <div class="ui seven cards">
+    <div class="card" *ngFor="let user of users">
+      <div class="ui image">
+        <img src="https://api.adorable.io/avatars/900/{{user.id}}.png" class="visible content">
+      </div>
+      <div class="content">
+        <a class="header">{{user.firstName}} {{user.lastName}}</a>
+        <div class="meta">
+          <span class="date">@{{user.userName}}</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- Cards -->
+  <br><br>
+
+</div>
+
+
+<div id="section2" class="ui segment fluid hide">
+
+  <div class="container text-center" style="overflow-x: auto;">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th >Id</th>
+          <th>Mentor Name</th>
+          <th>Technology Name</th>
+          <th>Skill Name</th>
+          <th>Fees</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let training of training">
+          <td>{{training.id}}</td>
+          <td>{{training.mentor.firstName}}</td>
+          <td>{{training.technology.techName}}</td>
+          <td><span *ngFor="let skill of training.skills">{{skill.name}}</span></td>
+          <td>{{training.fees}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

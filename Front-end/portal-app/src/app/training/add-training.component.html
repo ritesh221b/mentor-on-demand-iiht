@@ -1,0 +1,93 @@
+<!-- 
+  Author  : Ritesh Phogat
+  Email   : riteshphogat11@gmail.com
+  Project : Mentor on Demand 
+  Date 
+-->
+<div class="ui left ribbon label link large up-sec-bg text-white">Add a new Training</div>
+<a routerLink="/training" class="ui right label link large float-right"> <i class="ui icon left arrow"></i>back</a>
+
+
+<div class="row"> 
+
+  <div class="col-4"> </div>
+  <div class="col-4">
+    <form>
+
+      <div class="form-group">
+        <input [(ngModel)]="training.progress" placeholder="Progress" name="progress" class="form-control w-100" id="progress">
+      </div>
+      <br>
+
+      <div class="form-group">
+        <input [(ngModel)]="training.commissionPercent" placeholder="Commission Percent" name="commissionPercent" class="form-control w-100" id="commissionPercent">
+      </div>
+      <br>
+
+      <div class="form-group">
+        <input [(ngModel)]="training.rating" placeholder="Rating" name="rating" class="form-control w-100" id="rating">
+      </div>
+      <br>
+
+      <div class="form-group">
+        <input type="datetime" [(ngModel)]="training.startDate" placeholder="Start Date (yyyy-mm-dd)" name="startDate" class="form-control w-100" id="startDate">
+      </div>
+      <br>
+
+      <div class="form-group">
+        <input type="datetime" [(ngModel)]="training.endDate" placeholder="End Date (yyyy-mm-dd)" name="endDate" class="form-control w-100" id="endDate">
+      </div>
+      <br>
+
+      <div class="form-group">
+        <input type="datetime" [(ngModel)]="training.startTime" placeholder="Start Time (hh:mm:ss)" name="startTime" class="form-control w-100" id="startTime">
+      </div>
+      <br>
+
+      <div class="form-group">
+        <input type="datetime" [(ngModel)]="training.endTime" placeholder="End Time (hh:mm:ss)" name="endTime" class="form-control w-100" id="endTime">
+      </div>
+      <br>
+
+      <div class="form-group">
+        <input type="number" [(ngModel)]="training.amountReceived" placeholder="Amount Received" name="amountReceived" class="form-control w-100" id="amountReceived">
+      </div>
+      <br> 
+
+      <div class="form-group">
+        <input type="number" [(ngModel)]="training.mentorId" placeholder="Mentor Id" name="mentorId" class="form-control w-100" id="mentorId">
+      </div>
+      <br>
+      <div class="form-group">                     
+        <input type="number" [(ngModel)]="training.amounttoMentor" placeholder="Amount To Mentor" name="amounttoMentor" class="form-control w-100 w-100" id="amounttoMentor">           
+      </div>
+      <br>
+
+      <div class="form-group">
+        <input type="number" [(ngModel)]="training.userId" placeholder="User Id" name="userId" class="form-control w-100" id="userId">
+      </div>
+      <br>
+
+      <div class="form-group">
+        <input type="number" [(ngModel)]="training.skillId" placeholder="Skill Id" name="skillId" class="form-control w-100" id="skillId">
+      </div>
+      <br>
+
+      <div class="form-group">
+        <input type="number" [(ngModel)]="training.fees" placeholder="Fees" name="fees" class="form-control w-100" id="fees">
+      </div>
+      <br>
+      <div class="form-group">
+        <input type="string" [(ngModel)]="training.status" placeholder="Status" name="status" class="form-control w-100" id="status">
+      </div>                    
+      <br><br>
+
+
+      <button class="ui button up-green-bg text-white fluid" (click)="createTraining()" routerLink="/admin">Create</button><br><br>
+    </form>
+
+
+  </div>
+  <div class="col-4"> </div>
+
+</div>  

@@ -1,0 +1,28 @@
+<!-- 
+	Author  : Ritesh Phogat
+	Email   : riteshphogat11@gmail.com
+	Project : Mentor on Demand 
+	Date 
+-->
+<div class="row mt- pt-5">
+	<div class="col-4"></div>
+	<div class="col-4">
+		<div class="ui segment raised">
+			<a routerLink="/page"><i class="ui icon left arrow black link m-0 pt-0 large"></i></a>
+			<div class="ui form mt-3">
+				<h2 id="l" class="text-center"><i class="ui icon user outline large"></i> <br>	Login as Student</h2>
+				<form align="center" action="UserMenu1.html">
+					<div class="container">
+						<input class="ui input small rounded-0 mt-3" type="text" [(ngModel)]="user.userName" name="uname" placeholder="Enter Username"><br>
+						<input class="ui input small rounded-0 mt-3" type="password" [(ngModel)]="user.password" placeholder="Enter Password" name="psw"><br>
+					</div>
+					<div class="container mt-0" style="background-color: transparent;">
+						<button class="loginbtn ui button up-green-bg text-white mt-3 fluid rounded-0" (click)='authenticate(user.userName,user.password)'>Login</button><br><br>
+						<span class="psw"><a routerLink="/signup"><b>Forgot password?/Signup</b></a></span>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="col-4"></div>
+</div>

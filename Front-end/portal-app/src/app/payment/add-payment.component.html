@@ -1,0 +1,55 @@
+<!-- 
+  Author  : Ritesh Phogat
+  Email   : riteshphogat11@gmail.com
+  Project : Mentor on Demand 
+  Date 
+-->
+
+<div id="form" class="p-3">
+
+  <div class="row mt- pt-5">
+    <div class="col-4"></div>
+    <div class="col-4">
+      <div class="ui segment raised">
+        <div class="ui form mt-3">
+          <h2 class="text-center mb-4"> Add a card</h2>
+          <form>
+
+            <div class="field">
+              <input [(ngModel)]="payment.txnType" placeholder="Transaction Type" name="txnType" class="input fluid" id="txnType">
+            </div>
+            <br>
+            <div class="field">
+              <input type="text" [(ngModel)]="payment.amount" placeholder="Amount" name="amount" class="input fluid" id="amount">
+            </div>
+            <br>
+            <div class="field">
+              <input [(ngModel)]="payment.techName" placeholder="Technology Name" name="techName" class="input fluid" id="techName">
+            </div>
+            <br>
+            <div class="field">
+              <input type="text" [(ngModel)]="payment.remarks" placeholder="Remarks" name="remarks" class="input fluid" id="remarks">
+            </div>
+            <br>
+            <div class="field">
+              <input type="text" [(ngModel)]="payment.mentorId" placeholder="Mentor Id" name="mentorId" class="input fluid" id="mentorId">
+            </div>
+            <br>
+            <div class="field">
+              <input type="text" [(ngModel)]="payment.trainingId" placeholder="Training Id" name="trainingId" class="input fluid" id="trainingId">
+            </div>
+            <br>
+            <br>
+            <button class="ui button fluid up-green-bg text-white rounded-0" routerLink="/home" (click)="createPayment()">Checkout</button>
+          </form>
+
+
+
+
+        </div>
+      </div>
+    </div>
+    <div class="col-4"></div>
+  </div>
+
+</div>

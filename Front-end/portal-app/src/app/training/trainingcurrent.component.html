@@ -1,0 +1,65 @@
+<!-- 
+  Author  : Ritesh Phogat
+  Email   : riteshphogat11@gmail.com
+  Project : Mentor on Demand 
+  Date 
+-->
+
+
+<div class="p-3">
+
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Progress</th>
+        <th>Commission Percent</th>
+        <th>Rating</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Start Time</th>
+        <th>End Time</th>
+        <th>Amount Received</th>
+        <th>Mentor Name</th>
+        <th>Amount To Mentor</th>
+        <th>User Name</th>
+        <th>Tech. Name</th>
+        <th>Skill Name</th>
+        <th>Fees</th>
+        <th>Status</th>
+        <th>View Details</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let training of training">
+        <td>{{training.id}}</td>
+        <td><circle-progress
+          [percent]="training.progress"
+          [radius]="20"
+          [outerStrokeWidth]="6"
+          [innerStrokeWidth]="0"
+          [outerStrokeColor]="powderblue"
+          [innerStrokeColor]="'#C7E596'"
+          [animation]="true"
+          [animationDuration]="200"
+          [titleFontSize] = "12"
+          ></circle-progress></td>
+          <td>{{training.commissionPercent}}</td>
+          <td>{{training.rating}}</td>
+          <td>{{training.startDate}}</td>
+          <td>{{training.endDate}}</td>
+          <td>{{training.startTime}}</td>
+          <td>{{training.endTime}}</td>
+          <td>{{training.amountReceived}}</td>
+          <td>{{training.mentor.firstName}}</td>
+          <td>{{training.amounttoMentor}}</td>
+          <td><span *ngFor="let user of training.users">{{user.firstName}}</span></td>
+          <td>{{training.technology.techName}}</td>
+          <td><span *ngFor="let skill of training.skills">{{skill.name}}</span></td>
+          <td>{{training.fees}}</td>
+          <td>{{training.status}}</td>
+          <td><a routerLink="/trainingdetailsforuser"><button type="button" class="btn btn-info btn-md">View</button></a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

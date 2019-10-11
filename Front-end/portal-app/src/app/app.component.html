@@ -1,0 +1,119 @@
+<!-- Navbar -->
+<div class="ui white menu fixed text-google-plus borderless raised huge bg-white" id="navbar">
+ <a  routerLink="/" class="item link pl-md-5 pr-5 mr-md-5" title="Foxoyo Homepage"><img src="https://angular.io/assets/images/logos/angular/shield-large.svg" style="width:30px;height:30px;" class="rounded-circle"> <span class="lead ml-2 text-google-plus font-weight-bold">MOD</span></a>
+ <div class="item hideOnPhone pl-2"></div>
+ <div class="item hideOnPhone pl-0 mr-0 pr-0"></div>
+
+ <form action="https://google.com/search?q=site:foxoyo.com/topics" style="display: none" method="get" class="ui search item hideOnPhone p-2" id="searchForm" style="width:730px;">
+  <i class="ui icon left arrow ml-1 hideOnComputer toggleSearchOnNavbar text-google-plus large"></i>
+  <div class="ui icon input"><input class="bg-light " type="search" name="q" placeholder="Search " value="" id="searchInput" title="Press Enter for more results" autocomplete="off"> <i class="search link icon"></i></div>
+  <div class="results small border-0 w-100"></div>
+  <input type="hidden" name="type" id="searchType" value=""> <input type="hidden" name="topic" id="searchTopic" value=""> <input type="hidden" name="user" id="searchUser" value=""> <input type="hidden" name="difficulty" id="searchDifficulty" value=""> <input type="hidden" name="sort" id="searchSort" value=""> 
+</form>
+
+<div class="right menu borderNone borderless">
+  <div class="item hideOnComputer toggleSearchOnNavbar"><i class="ui icon search text-google-plus"></i></div>
+  <a routerLink="/page" class="item link zooToggle text-google-plus" data-toggle="#navbarUserAvatarModal">
+    <i class="ui icon user circle large text-google-plus"></i>
+  </a>
+</div>
+</div>
+<!-- Navbar -->
+
+
+<div class="p-3 mt-3 mb-0">
+  <!-- Admin Menu -->
+  <div class="ui  rounded-0 secondary menu big" *ngIf="loginType=='admin'">
+    <a routerLink="/" [ngClass]="router.url=='/'? 'item up-green-bg text-white link font-weight-bold' : 'text-white item link font-weight-bold'"> Home </a>
+    <a routerLink="/admin" [ngClass]="router.url=='/admin'? 'item up-green-bg text-white link font-weight-bold' : 'text-white item link font-weight-bold'">Admin Home </a>
+    <a routerLink="/mentor" [ngClass]="router.url=='/mentor'? 'item up-green-bg text-white link font-weight-bold' : 'text-white item link font-weight-bold'">Mentors </a>
+    <a routerLink="/user" [ngClass]="router.url=='/user'? 'item up-green-bg text-white link font-weight-bold' : 'text-white item link font-weight-bold'">User </a>
+    <a routerLink="/technology" [ngClass]="router.url=='/technology'? 'item up-green-bg text-white link font-weight-bold' : 'text-white item link font-weight-bold'">Technologies </a>
+    <a routerLink="/payment" [ngClass]="router.url=='/payment'? 'item up-green-bg text-white link font-weight-bold' : 'text-white item link font-weight-bold'">Payments </a>
+    <a routerLink="/skill" [ngClass]="router.url=='/skill'? 'item up-green-bg text-white link font-weight-bold' : 'text-white item link font-weight-bold'">Skills </a>
+    <a routerLink="/training" [ngClass]="router.url=='/training'? 'item up-green-bg text-white link font-weight-bold' : 'text-white item link font-weight-bold'"> Trainings</a>  
+    <div class="right menu">
+      <a routerLink="/logout" [ngClass]="router.url=='/adminlogin'? 'item up-green-bg text-white link font-weight-bold' : 'text-white item link font-weight-bold'">Logout</a>
+    </div>
+  </div>
+  <!-- Admin Menu -->
+
+  <!-- User Menu -->
+  <div class="ui rounded-0 secondary menu big" *ngIf="loginType=='student'">
+    <a routerLink="/" [ngClass]="router.url=='/'? 'item up-green-bg text-white link font-weight-bold' : 'text-white item link font-weight-bold'"> Home </a>
+
+    <a routerLink="/home" [ngClass]="router.url=='/home'? 'item up-green-bg text-white link font-weight-bold' : 'text-white item link font-weight-bold'">User Home </a>
+    <a routerLink="/userid" [ngClass]="router.url=='/userid'? 'item up-green-bg text-white link font-weight-bold' : 'text-white item link font-weight-bold'">Profile </a>
+    <a routerLink="/trainingcurrent" [ngClass]="router.url=='/trainingcurrent'? 'item up-green-bg text-white link font-weight-bold' : 'text-white item link font-weight-bold'">Current Training </a>
+    <a routerLink="/trainingcompleted" [ngClass]="router.url=='/trainingcompleted'? 'item up-green-bg text-white link font-weight-bold' : 'text-white item link font-weight-bold'">Completed Training </a>
+    <a routerLink="/addpayment" [ngClass]="router.url=='/addpayment'? 'item up-green-bg text-white link font-weight-bold' : 'text-white item link font-weight-bold'">Add Card </a>
+    <div class="right menu">
+      <a routerLink="/logout" [ngClass]="router.url=='/adminlogin'? 'item up-green-bg text-white link font-weight-bold' : 'text-white item link font-weight-bold'">Logout</a>
+    </div>
+  </div>
+  <!-- User Menu -->
+
+  <!-- Guest Menu -->
+  <h3 class="display-4 text-white text-center mt-5 pt-3 pb-5"  *ngIf="!loginType">We'll help you grow!</h3>
+
+  <div class="ui rounded-0 secondary menu big" *ngIf="!loginType">
+    <a routerLink="/" [ngClass]="router.url=='/'? 'item up-green-bg text-white link font-weight-bold' : 'text-white item link font-weight-bold'">Home </a>
+    <a routerLink="/page" [ngClass]="router.url=='/page'? 'item up-green-bg text-white link font-weight-bold' : 'text-white item link font-weight-bold'">Get Started </a>
+
+    <div class="right menu">
+
+      <a routerLink="/signin" [ngClass]="router.url=='/signin'? 'item up-green-bg text-white link font-weight-bold' : 'text-white item link font-weight-bold'">Student</a>
+      <a routerLink="/login" [ngClass]="router.url=='/login'? 'item up-green-bg text-white link font-weight-bold' : 'text-white item link font-weight-bold'">Mentor</a>
+    </div>
+
+  </div>
+  <!-- Guest Menu -->
+
+  <!-- Mentor Menu -->
+  <div class="ui rounded-0 secondary menu big" *ngIf="loginType=='mentor'">
+    <a routerLink="/" [ngClass]="router.url=='/'? 'item up-green-bg text-white link font-weight-bold' : 'text-white item link font-weight-bold'"> Home </a>
+
+    <a routerLink="/trainerhome" [ngClass]="router.url=='/trainerhome'? 'item up-green-bg text-white link font-weight-bold' : 'text-white item link font-weight-bold'">Mentor Home </a>
+    <a routerLink="/trainerid" [ngClass]="router.url=='/trainerid'? 'item up-green-bg text-white link font-weight-bold' : 'text-white item link font-weight-bold'">Profile</a>
+    <a routerLink="/trainingmentor" [ngClass]="router.url=='/trainingmentor'? 'item up-green-bg text-white link font-weight-bold' : 'text-white item link font-weight-bold'">Trainings</a>
+
+    <div class="right menu">
+      <a routerLink="/logout" [ngClass]="router.url=='/logout'? 'item up-green-bg text-white link font-weight-bold' : 'text-white item link font-weight-bold'">Logout</a>
+    </div>
+
+  </div>
+  <!-- Mentor Menu -->
+
+
+
+  <div class="ui p-4 pb-0 segment raised mt-4 white" style="min-height: 90vh;">
+    <router-outlet></router-outlet>
+  </div>
+
+</div>
+
+
+
+<!-- Footer -->
+<footer class=" pb-5">
+ <div class="ui backBlueLight2 vertical footer segment pt-4">
+  <div class="ui pl-5 p-0 m-0">
+   <div class="ui horizontal list hide">
+    <a href="https://www.facebook.com/" class="ui item link"><i class="ui icon facebook text-muted big"></i></a>
+    <div class="ui item link"><i class="ui icon twitter text-muted big hide"></i></div>
+    <div class="ui item link"><i class="ui icon instagram text-muted big hide"></i></div>
+  </div>
+  <br><br>
+  <p class="h2 text-white">Mentor on demand</p>
+  <p class="lead text-white">made with <i class="ui icon heart red small mt-3 mb-3"></i> and passion</p>
+  <div class="ui vertical list p-0 m-0">
+    <a class="item link font-weight-bold ml-0 mr-1" href="https://www.facebook.com/" title="sitemap">Facebook</a>
+    <a class="item link font-weight-bold ml-0 mr-1" href="/privacy" title="sitemap">Privacy</a>
+    <a class="item link font-weight-bold ml-0 mr-1" href="/cookies" title="sitemap">Cookies</a>
+
+    <a class="item link font-weight-bold ml-0 mr-1" href="/" target="_blank" rel="noopener" title="Google Map"><i class="ui icon map marker blue"></i> Visit Us</a></div>
+  </div>
+  <br><br>
+</div>
+</footer>
+<!-- Footer -->

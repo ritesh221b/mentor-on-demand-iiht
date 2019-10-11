@@ -1,0 +1,273 @@
+<!-- 
+	Author  : Ritesh Phogat
+	Email   : riteshphogat11@gmail.com
+	Project : Mentor on Demand 
+	Date 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<style type="text/css">
+		body{
+			position: relative;
+		}
+		table {
+			font-family: arial, sans-serif;
+			border-collapse: collapse;
+			width: 100%;
+			color: black;
+		}
+
+		td, th {
+			border: 2px solid #dddddd;
+			text-align: left;
+			padding: 8px;
+			font-size:20px;
+			width:20%;
+		}
+
+		tr:nth-child(even) {
+			background-color: #dddddd;
+		}
+		.progress{
+			width: 100%;
+		}
+		.checked{
+			color: red;
+		}
+		h1.h1{
+			text-align: center;
+
+		}
+		h3{
+			color: cornsilk;
+		}
+
+		#section1 {padding-top:50px;height:500px;color: #fff; background-image: linear-gradient(#3accce,white); height: 650px;}
+		#section2 {padding-top:50px;height:500px;color: #fff; background-image: linear-gradient(#673ab7,white); height: 650px;}
+		#section41 {padding-top:50px;height:500px;color: #fff; background-image: linear-gradient(#00bcd4,white); height: 650px;}
+		#section42 {padding-top:50px;height:500px;color: #fff; background-image: linear-gradient(#009688,white); height: 650px;}
+	</style>
+	<title>Bootstrap Example</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+	<nav class="navbar navbar-inverse navbar-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" routerLink="/home"><span class="glyphicon glyphicon-home"></span> Home</a>
+				<a class="navbar-brand" routerLink="/userid"><span class="glyphicon glyphicon-user"></span> UserID</a>
+				<a class="navbar-brand" routerLink="/usermenu">Current Trainings</a>
+				<a class="navbar-brand" href="/usermenu#section2">Completed Trainings</a>
+				<a class="navbar-brand" href="/payment">Payments</a>
+				<ul class="nav navbar-nav navbar-right">
+					<!--<li><a class="navbar-brand" href="#"><span class="glyphicon glyphicon-bell"></span>Notifications</a></li>-->
+					<li><a class="navbar-brand" routerLink="/startpage"><span class="glyphicon glyphicon-log-out"></span>Logout</a></li></ul>
+					<form class="navbar-form navbar-right" action="SearchResults.html">
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="Search" name="search">
+							<div class="input-group-btn">
+								<button class="btn btn-default" type="submit">
+									<i class="glyphicon glyphicon-search"></i>
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</nav><br>
+		<div id="section1" class="container-fluid"  style="margin-top: -40px;">
+			<a routerLink="/home"><h3><b>Back</b></h3></a>
+			<br>
+			<h1 class="h1">Work In Progress!</h1>
+			<table>
+				<tr>
+					<th>Course</th>
+					<th>Program</th>
+					<th>Progress</th>
+					<th>Rating</th>
+				</tr>
+				<tr>
+					<td>Artificial Intelligence</td>
+					<td>6-week</td>
+					<td>
+						<div class="progress">
+							<div class="progress-bar progress-bar-info" role="progressbar" style="width:60%; color:black; text-align: center;"> 60% Through</div>
+						</div>
+					</td>
+					<td>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star"></span>
+						<span class="fa fa-star"></span>
+					</td>
+				</tr>
+				<tr>
+					<td>Illustrator</td>
+					<td>6-Week</td>
+					<td>
+						<div class="progress">
+							<div class="progress-bar progress-bar-success" role="progressbar" style="width:85%; color:black; text-align: center;"> 85% Through</div>
+						</div>
+					</td>
+					<td>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star"></span>
+					</td>
+				</tr>
+				<tr>
+					<td>Photoshop</td>
+					<td>12-Week</td>
+					<td>
+						<div class="progress">
+							<div class="progress-bar progress-bar-danger" role="progressbar" style="width:20%; color:black; text-align: center;"> 20% Through</div>
+						</div>
+					</td>
+					<td>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star"></span>
+						<span class="fa fa-star"></span>
+					</td>
+				</tr>
+				<tr>
+					<td>Graphic Designing</td>
+					<td>12-Week</td>
+					<td>
+						<div class="progress">
+							<div class="progress-bar progress-bar-warning" role="progressbar" style="width:40%; color:black; text-align: center;"> 40% Through</div>
+						</div>
+					</td>
+					<td>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star"></span>
+					</td>
+				</tr>
+				<tr>
+					<td>Adobe After Effects</td>
+					<td>12-Week</td>
+					<td>
+						<div class="progress">
+							<div class="progress-bar progress-bar-success" role="progressbar" style="width:90%; color:black; text-align: center;"> 90% Through</div>
+						</div>
+					</td>
+					<td>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+					</td>
+				</tr>
+			</table>
+			<br><br><br>
+		</div>
+		
+		<div id="section2" class="container-fluid">
+			<a routerLink="/home"><h3><b>Back</b></h3></a>
+			<br>
+			<h1 class="h1">Mission Accomplished!!</h1>
+			<table>
+				<tr>
+					<th>Course</th>
+					<th>Program</th>
+					<th>Progress</th>
+					<th>Rating</th>
+				</tr>
+				<tr>
+					<td>Html5</td>
+					<td>6-week</td>
+					<td>
+						<div class="progress">
+							<div class="progress-bar progress-bar-success" role="progressbar" style="width:100%; color:black;"> Great Work! Course Completed </div>
+						</div>
+					</td>
+					<td>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star"></span>
+						<span class="fa fa-star"></span>
+					</td>
+				</tr>
+				<tr>
+					<td>CSS</td>
+					<td>6-Week</td>
+					<td>
+						<div class="progress">
+							<div class="progress-bar progress-bar-success" role="progressbar" style="width:100%;color:black;"> All the hurdles are done</div>
+						</div>
+					</td>
+					<td>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star"></span>
+					</td>
+				</tr>
+				<tr>
+					<td>JavaScript</td>
+					<td>12-Week</td>
+					<td>
+						<div class="progress">
+							<div class="progress-bar progress-bar-success" role="progressbar" style="width:100%; color:black;"> Phew! Course Completed</div>
+						</div>
+					</td>
+					<td>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star"></span>
+						<span class="fa fa-star"></span>
+					</td>
+				</tr>
+				<tr>
+					<td>Java</td>
+					<td>12-Week</td>
+					<td>
+						<div class="progress">
+							<div class="progress-bar progress-bar-success" role="progressbar" style="width:100%; color:black;"> 100% Through Yayy!</div>
+						</div>
+					</td>
+					<td>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star"></span>
+					</td>
+				</tr>
+				<tr>
+					<td>SQL</td>
+					<td>6-Week</td>
+					<td>
+						<div class="progress">
+							<div class="progress-bar progress-bar-success" role="progressbar" style="width:100%; color:black;"> 100% Done! Bravo mate</div>
+						</div>
+					</td>
+					<td>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+						<span class="fa fa-star checked"></span>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+	</html>

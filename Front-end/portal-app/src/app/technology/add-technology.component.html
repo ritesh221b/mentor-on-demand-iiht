@@ -1,0 +1,31 @@
+<!-- 
+  Author  : Ritesh Phogat
+  Email   : riteshphogat11@gmail.com
+  Project : Mentor on Demand 
+  Date 
+-->
+<div class="ui left ribbon label link large up-sec-bg text-white">Add a new Technology</div>
+<a routerLink="/technology" class="ui right label link large float-right"> <i class="ui icon left arrow"></i>back</a>
+
+<div class="row"> 
+  <div class="col-4"> </div>
+  <div class="col-4">
+   <div id="form" class="container text-center">
+    <h2 class="text-center">Add Technology</h2>
+    <br><br>
+    <form>
+      <div class="form-group">
+        <input type="text" [(ngModel)]="technology.techName" placeholder="Technology Name" name="techName" class="form-control" id="techName">
+      </div>
+      <br>
+      <div class="form-group">
+        <input [(ngModel)]="technology.description" placeholder="Description" name="description" class="form-control" id="description">
+      </div>
+      <br><br>
+      <button class="ui button up-green-bg text-white fluid" (click)="createTechnology()" routerLink="/admin">Create</button>
+    </form>
+  </div>
+</div>
+<div class="col-4"> </div>
+</div>  
+

@@ -1,0 +1,26 @@
+<!-- 
+	Author  : Ritesh Phogat
+	Email   : riteshphogat11@gmail.com
+	Project : Mentor on Demand 
+	Date 
+-->
+<div class="row mt- pt-5">
+	<div class="col-4"></div>
+	<div class="col-4">
+		<div class="ui segment raised">
+			<a routerLink="/page"><i class="ui icon left arrow black link m-0 pt-0 large"></i></a>
+			<div class="ui form mt-3">
+				<h2 id="l" class="text-center"><i class="ui icon user outline large"></i> <br>	Login as admin</h2>
+				<form action="TrainingforMentor1.html">
+
+					<div class="container text-center mt-3">
+						<input type="text" name="uname" placeholder="Enter Username" (input)='usr = $event.target.value' class="input rounded-0 mt-2"><br>
+						<input type="password" placeholder="Enter Password" name="psw" (input)='pwd = $event.target.value' class="input rounded-0 mt-2"><br><br>
+						<button type="submit" class="ui button up-green-bg text-white fluid rounded-0" on-click='validate()' >Login</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="col-4"></div>
+</div>
